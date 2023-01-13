@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="bodySection">
+        <div class="header">
+            <p class="topHeader">SPLI</p>
+            <p class="bottomHeader">TTER</p>
+        </div>
+
+        <section class="calculator">
+            <section class="left_billSection">
+                <label class="bill">Bill</label>
+                <input type="text" class="billInput" placeholder="0">
+
+                <label class="select_tip">Select Tip </label>
+                <dic class="select_tipSection">
+                    <input type="submit" value="5" class="per5">
+                    <input type="submit" value="10" class="per10">
+                    <input type="submit" value="15" class="per15">
+                    <input type="submit" value="25" class="per25">
+                    <input type="submit" value="50" class="per50">
+                    
+                    <input  class="custom" placeholder="Custom">
+                </dic>
+
+                <label class="noOfPeople">Number of People</label>
+                <input type="text" placeholder="0" class="peopleNumber">
+            </section>
+            <section class="right_billsection">
+                <label >Tip amount</label>
+                <input class="Tip_amount" placeholder="0">
+                <label >Total</label>
+                <input class="TOTAL" placeholder="0">
+                <button class="RESET">RESET</button>
+            </section>
+        </section>
+    </section>
+</body>
+<script src="script.js"></script>
+</html>

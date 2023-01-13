@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(161, 230, 214);
+}
+#bodySection{
+    height: 100vh;
+    width: 100vw;
+}
+
+.header{
+    margin: 5vh 0 0 46vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.header p{
+    color: rgb(2, 37, 17);
+    font-size: 1.4rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 750;
+    letter-spacing: 4.5px;
+}
+
+/* Calculator section starts here */
+
+.calculator{
+    width: 70vw;
+    height: 70vh;
+    border: 2px solid black;
+    border-radius: 5vh;
+    margin: 5vh 0 5vh 15vw;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+/* left_billSection is here */
+.left_billSection{
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    height: 60vh;
+    margin: 5vh 5vw 5vh 5vw;
+}
+.left_billSection input{
+    margin: 2vh 0 4vh 0;
+}
+.select_tipSection input{
+    background-color: #012919;
+    color: white;
+}
+
+.select_tipSection .custom{
+    background-color: aliceblue;
+    color: black;
+}
+/* right_billsection is here */
+
+.right_billsection{
+    height: 60vh;
+    width: 25vw;
+    margin: 5vh 5vw 5vh 5vw;
+    background-color: #012919;
+    display: flex;
+    flex-direction: column;
+}
+.right_billsection label{
+    color: white;
+}
+
+.RESET{
+    width: 20vw;
+    color: #012919;
+    background-color: #38c98f;
+    margin-top: 10vh;
+}
