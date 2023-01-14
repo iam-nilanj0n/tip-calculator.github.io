@@ -52,6 +52,7 @@ resetButton.addEventListener('click', (event)=>{
     billInput.value = null;
     noOfPeopleInput.value = null;
     tipValue = 0;
+    customInput.value = null;
     tipOutput.textContent = '$0.00';
     totalOutput.textContent = '$0.00';
 })
