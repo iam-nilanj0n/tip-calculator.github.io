@@ -52,7 +52,10 @@ body{
 }
 .left_billSection input{
     margin: 2vh 0 3vh 0;
-    padding: 10px 10px 10px 23.5vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 23vw;
     border-radius: 5px;
 }
 .left_billSection label{
@@ -94,7 +97,7 @@ body{
     transform: translateY(2px);
     box-shadow: 0 2px rgb(18, 18, 18);
 }
-.select_tipSection .custom{
+.select_tipSection div .custom{
     background-color: aliceblue;
     color: black;
     padding: 0 0 0 10px;
@@ -102,6 +105,7 @@ body{
     width: 4.25vw;
     margin: 1vh 0 2vh 1vw;
     border-radius: 5px;
+    font-size: 0.7rem;
 }
 /* right_billsection is here */
 

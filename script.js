@@ -1,75 +1,68 @@
 // inputs are here
-const Tip_amount = document.querySelector('.Tip_amount');
-const Total = document.querySelector('.TOTAL');
 const billInput = document.querySelector('.billInput');
-const noOfPeople = document.querySelector('.peopleNumber');
+const noOfPeopleInput = document.querySelector('.peopleNumber');
+const customInput = document.querySelector('.custom');
 // buttons are here
-const per5 = document.querySelector('.per5');
-const per10 = document.querySelector('.per10');
-const per15 = document.querySelector('.per15');
-const per25 = document.querySelector('.per25');
-const per50 = document.querySelector('.per50');
-const custom = document.querySelector('.custom');
-
-// usefull variable are here
-let bill, people, tip, total, tipAmmount;
-
-// Left section calculator is here
-// button addEventListeners are here
-per5.addEventListener('click', function(e){
-    tip = Number(e.target.value);
-    console.log('tip', tip);
-    Calculate() 
-})
-per10.addEventListener('click', function(e){
-    tip = Number(e.target.value);
-    console.log('tip', tip);
-    Calculate() 
-})
-per15.addEventListener('click', function(e){
-    tip = Number(e.target.value);
-    console.log('tip', tip);
-    Calculate() 
-})
-per25.addEventListener('click', function(e){
-    tip = Number(e.target.value);
-    console.log('tip', tip);
-    Calculate() 
-})
-per50.addEventListener('click', function(e){
-    tip = Number(e.target.value);
-    console.log('tip', tip);
-    Calculate() 
-})
-custom.addEventListener('change', function(e){
-    tip = Number(e.target.value);
-    console.log('tip', tip);
-    Calculate() 
+const per5 = document.querySelector('.tip5');
+const per10 = document.querySelector('.tip10');
+const per15 = document.querySelector('.tip15');
+const per25 = document.querySelector('.tip25');
+const per50 = document.querySelector('.tip50');
+const resetButton = document.querySelector('.RESET')
+let arr = [];
+let tipValue = 0;
+// addEventListeners are here
+billInput.addEventListener('change', (event) => {
+    billInput.value = event.target.value;
 })
 
-// Inputs addEventListeners are here
-billInput.addEventListener('change', function(e){
-    bill = Number(e.target.value);
-    console.log('hi', bill); 
-    Calculate() 
+noOfPeopleInput.addEventListener('change', (event) => {
+    noOfPeopleInput.value = event.target.value;
 })
-
-noOfPeople.addEventListener('change', function(e){
-    people = Number(e.target.value);
-    console.log('hi', people);
-    Calculate() 
-});
-
-
-// Right section is here
-
-function Calculate(){
-    if(bill>0 && tip>0){
-        total = bill*(tip/100);
-        Total.innerHTML = total;
+customInput.addEventListener('change', (event) => {
+    customInput.value = event.target.value;
+})
+per5.addEventListener('click', (event)=>{
+    tipValue = 5
+})
+per10.addEventListener('click', (event)=>{
+    tipValue = 10
+})
+per15.addEventListener('click', (event)=>{
+    tipValue = 15
+})
+per25.addEventListener('click', (event)=>{
+    tipValue = 25
+})
+per50.addEventListener('click', (event)=>{
+    tipValue = 50
+})
+// setInterval is here
+const inputPaddingLeftDecrease = setInterval(() => {
+    if (String(billInput.value).length === 0) {
+        billInput.style.paddingLeft = '23vw';
     }
+    if (String(billInput.value).length > 0) {
+        arr = [...String(billInput.value)]
+        let padd1 = 23 - (0.5 * arr.length);
+        billInput.style.paddingLeft = `${padd1}vw`;
+    }
+    if (String(noOfPeopleInput.value).length === 0) {
+        noOfPeopleInput.style.paddingLeft = '23vw';
+    }
+    if (String(noOfPeopleInput.value).length > 0) {
+        arr = [...String(noOfPeopleInput.value)]
+        let padd2 = 23 - (0.5 * arr.length);
+        noOfPeopleInput.style.paddingLeft = `${padd2}vw`;
+    }
+    
+    if(customInput.value>0){
+        tipValue = customInput.value;
+        console.log(tipValue);
+    }
+}, 50)
 
-}
+
 
 
 
