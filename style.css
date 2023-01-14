@@ -52,7 +52,8 @@ body{
 }
 .left_billSection input{
     margin: 2vh 0 3vh 0;
-    padding: 10px;
+    padding: 10px 10px 10px 23.5vw;
+    border-radius: 5px;
 }
 .left_billSection label{
     font-weight: bolder;
@@ -64,15 +65,16 @@ body{
 .select_tipSection {
     display: flex;
     flex-direction: column;
+    margin: 1vh 0;
 }
 .select_tipSection div{
     display: flex;
     flex-direction: row;
-    border: 1px solid black;
     height: 8vh;
+    margin: 0 0 1vh 0;
 }
 .select_tipSection div button{
-    background-color: #012919;
+    background-color: #014228;
     color: white;
     padding: 10px;
     margin: 1vh 1vw;
@@ -84,21 +86,27 @@ body{
     box-shadow: 0 4px rgb(158, 157, 157);
 }
 .select_tipSection div button:hover{
-    background-color: #02462b;
+    background-color: #05794a;
     cursor: pointer;
+}
+
+.select_tipSection div button:active{
+    transform: translateY(2px);
+    box-shadow: 0 2px rgb(18, 18, 18);
 }
 .select_tipSection .custom{
     background-color: aliceblue;
     color: black;
-    padding: 0 0 0 5px;
+    padding: 0 0 0 10px;
     height: 4.5vh;
-    width: 5vw;
+    width: 4.25vw;
     margin: 1vh 0 2vh 1vw;
+    border-radius: 5px;
 }
 /* right_billsection is here */
 
 .right_billsection{
-    height: 60vh;
+    height: 50vh;
     width: 25vw;
     margin: 5vh 5vw 5vh 5vw;
     background-color: #012919;
@@ -106,14 +114,51 @@ body{
     flex-direction: column;
     border: 0;
     border-radius: 10px;
+    padding: 5vh;
 }
-.right_billsection label{
-    color: white;
+.right_billsection div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1vh 0;
+}
+.right_billsection div div h2{
+    letter-spacing: 1px;
+    color: whitesmoke;
+    font-family: 'Gill Sans', 'Gill Sans MT','Trebuchet MS', sans-serif;
+}
+.right_billsection div div small{
+    font-weight: bolder;
+    color: #38c98f;
+}
+.right_billsection div p{
+    color: #38c98f;
+    font-weight: bolder;
+    font-size: 2.5rem;
+}
+.right_billsection div div{
+    display: flex;
+    flex-direction: column;
 }
 
 .RESET{
     width: 20vw;
+    font-weight: bolder;
+    letter-spacing: 1px;
     color: #012919;
     background-color: #38c98f;
     margin-top: 10vh;
+    padding: 15px;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 6px rgb(114, 114, 114);
+}
+
+.RESET:hover{
+    cursor: pointer;
+    background-color: #50eaac;
+}
+.RESET:active{
+    transform: translateY(3px);
+    box-shadow: 0 4px rgb(114, 114, 114);
 }
