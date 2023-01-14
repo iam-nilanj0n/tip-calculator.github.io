@@ -51,16 +51,49 @@ body{
     margin: 5vh 5vw 5vh 5vw;
 }
 .left_billSection input{
-    margin: 2vh 0 4vh 0;
+    margin: 2vh 0 3vh 0;
+    padding: 10px;
 }
-.select_tipSection input{
+.left_billSection label{
+    font-weight: bolder;
+    font-size: 1.2rem;
+    margin: 0 0 1vh 0;
+    color: #012919;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.select_tipSection {
+    display: flex;
+    flex-direction: column;
+}
+.select_tipSection div{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    height: 8vh;
+}
+.select_tipSection div button{
     background-color: #012919;
     color: white;
+    padding: 10px;
+    margin: 1vh 1vw;
+    height: 5vh;
+    width: 5vw;
+    font-weight: bolder;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 4px rgb(158, 157, 157);
 }
-
+.select_tipSection div button:hover{
+    background-color: #02462b;
+    cursor: pointer;
+}
 .select_tipSection .custom{
     background-color: aliceblue;
     color: black;
+    padding: 0 0 0 5px;
+    height: 4.5vh;
+    width: 5vw;
+    margin: 1vh 0 2vh 1vw;
 }
 /* right_billsection is here */
 
