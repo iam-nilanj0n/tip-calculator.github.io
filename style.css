@@ -166,3 +166,15 @@ body{
     transform: translateY(3px);
     box-shadow: 0 4px rgb(114, 114, 114);
 }
+
+/* Responsive UI is here */
+
+@media (width<800px){
+    body{
+        transform: scale(0.95);
+    }
+
+    .right_billsection{
+        transform: scale(0.75);
+    }
+}
